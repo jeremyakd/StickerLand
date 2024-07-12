@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Sticker List</h1>
+  <ul>
+    {% for sticker in object_list %}
+      <li><a href="{% url 'sticker_detail' sticker.pk %}">{{ sticker.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
